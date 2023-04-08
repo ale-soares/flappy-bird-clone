@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 486982588}
   - component: {fileID: 486982587}
   m_Layer: 0
-  m_Name: Pipe Spawner
+  m_Name: Obstacle Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,9 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b506c936c1b10544961df2d69d23bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipe: {fileID: 6413430208502574397, guid: fbac870eb3b543d41a68af45703fa2ed, type: 3}
+  obstacle: {fileID: 7491967147830858106, guid: 340f3d3e70bf25e479e7d8ea176d2d55, type: 3}
   spawnRate: 4
-  spawnHeightOffset: 10
+  spawnHeightOffset: 8
 --- !u!4 &486982588
 Transform:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486982586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.3, y: 0.13, z: 0.5147091}
+  m_LocalPosition: {x: 39.97, y: 0.13, z: 0.5147091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,7 +359,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.26265574, g: 0.28027683, b: 0.6415094, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fa3d0f5b36703834a9013b81bc99b8ca, type: 3}
     m_FontSize: 217
     m_FontStyle: 1
     m_BestFit: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fa3d0f5b36703834a9013b81bc99b8ca, type: 3}
     m_FontSize: 177
     m_FontStyle: 1
     m_BestFit: 0
@@ -750,9 +750,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1, y: -0.45}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.82
+  m_Radius: 0.14
 --- !u!50 &2080752943
 Rigidbody2D:
   serializedVersion: 4
@@ -815,12 +815,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b18a664ecb0dc304e8f8183ce4bf30bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca84eae74674f57409f71bb5f622d89b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.46, y: 5.2}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -834,8 +834,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080752940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.13365, z: 0.036899365}
-  m_LocalScale: {x: 0.8575738, y: 0.8575738, z: 0.8575738}
+  m_LocalPosition: {x: -19.92, y: 0, z: 0}
+  m_LocalScale: {x: 12.852116, y: 12.852116, z: 12.852116}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -900,7 +900,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fa3d0f5b36703834a9013b81bc99b8ca, type: 3}
     m_FontSize: 69
     m_FontStyle: 0
     m_BestFit: 0
