@@ -5,18 +5,32 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-    public float flapStrength;
     public LogicManager logic;
+
+    public float flapStrength;
     public bool birdIsAlive = true;
 
-    // Start is called before the first frame update
+    float screenVerticalTopLimit = 18;
+    float screenVerticalBottomLimit = -18;
+
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("LogicTag").GetComponent<LogicManager>();
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        moveBird();
+        checkForOutOfBounds();
+    }
+
+    private void triggerGameOver()
+    {
+        logic.gameOver();
+        birdIsAlive = false;
+    }
+
+    private void moveBird()
     {
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
@@ -24,9 +38,16 @@ public class Bird : MonoBehaviour
         }
     }
 
+    private void checkForOutOfBounds()
+    {
+        if (myRigidbody.position.y > screenVerticalTopLimit || myRigidbody.position.y < screenVerticalBottomLimit)
+        {
+            triggerGameOver();
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logic.gameOver();
-        birdIsAlive = false;
+        triggerGameOver();
     }
 }

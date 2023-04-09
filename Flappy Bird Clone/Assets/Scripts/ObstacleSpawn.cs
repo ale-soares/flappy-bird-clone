@@ -5,22 +5,34 @@ using UnityEngine;
 public class ObstacleSpawn : MonoBehaviour
 {
     public GameObject obstacle;
+
     public float spawnRate = 2;
-    private float timer = 0;
+    public float minSpawnRate = 2;
+    public float acceleration;
+
     public float spawnHeightOffset = 10;
 
-    // Start is called before the first frame update
+    private float timer = 0;
+
     void Start()
     {
         spawnObstacle();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timer < spawnRate)
         {
             timer += Time.deltaTime;
+
+            if (spawnRate > minSpawnRate)
+            {
+                spawnRate -= Time.deltaTime * acceleration;
+            }
+            else
+            {
+                spawnRate = minSpawnRate;
+            }
         }
         else
         {
